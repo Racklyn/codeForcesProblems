@@ -16,5 +16,11 @@ for c in range(t):
     else:
         m1 = max(a[1:]) - a[0]
         m2 = a[-1] - min(a[:-1])
+        
+        m3 = 0
+        for i in range(n-1):
+            dif = a[i] - a[i+1]
+            if dif > m3:
+                m3 = dif
 
-        print(max(m1, m2))
+        print(max(m1, m2, m3))
